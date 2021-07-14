@@ -18,14 +18,20 @@ class SideMenu extends StatelessWidget {
             children: [
               Container(
                 padding: EdgeInsets.only(left: 30),
-                child: Icon(Icons.sync),
+                child: Icon(
+                  Icons.sync,
+                  color: Color(0xff00BC73),
+                ),
               ),
               SizedBox(
                 width: 10,
               ),
               Container(
                 alignment: Alignment.center,
-                child: Text("Synchronization"),
+                child: Text(
+                  "Synchronization",
+                  style: TextStyle(color: Color(0xff00BC73)),
+                ),
               ),
             ],
           ),
@@ -36,14 +42,20 @@ class SideMenu extends StatelessWidget {
             children: [
               Container(
                 padding: EdgeInsets.only(left: 30),
-                child: Icon(Icons.upload),
+                child: Icon(
+                  Icons.upload,
+                  color: Colors.grey,
+                ),
               ),
               SizedBox(
                 width: 10,
               ),
               Container(
                 alignment: Alignment.center,
-                child: Text("Upload"),
+                child: Text(
+                  "Upload",
+                  style: TextStyle(color: Colors.grey),
+                ),
               ),
             ],
           ),
@@ -54,14 +66,18 @@ class SideMenu extends StatelessWidget {
             children: [
               Container(
                 padding: EdgeInsets.only(left: 30),
-                child: Icon(Icons.notifications),
+                child: Icon(
+                  Icons.notifications,
+                  color: Colors.grey,
+                ),
               ),
               SizedBox(
                 width: 10,
               ),
               Container(
                 alignment: Alignment.center,
-                child: Text("Notification"),
+                child:
+                    Text("Notification", style: TextStyle(color: Colors.grey)),
               ),
             ],
           ),
@@ -72,14 +88,17 @@ class SideMenu extends StatelessWidget {
             children: [
               Container(
                 padding: EdgeInsets.only(left: 30),
-                child: Icon(Icons.settings),
+                child: Icon(
+                  Icons.settings,
+                  color: Colors.grey,
+                ),
               ),
               SizedBox(
                 width: 10,
               ),
               Container(
                 alignment: Alignment.center,
-                child: Text("Setting"),
+                child: Text("Setting", style: TextStyle(color: Colors.grey)),
               ),
             ],
           ),

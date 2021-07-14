@@ -12,9 +12,9 @@ class DownloadSpeed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.all(defaultPadding),
+        padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: secondaryColor,
+          color: Colors.white,
           borderRadius: const BorderRadius.all(Radius.circular(10)),
         ),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -30,13 +30,15 @@ class DownloadSpeed extends StatelessWidget {
                   height: 50,
                   width: 50,
                   decoration: BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.green),
+                      shape: BoxShape.circle, color: Color(0xff00BC73)),
                   child: Center(
-                    child: Icon(
-                      Icons.cloud,
-                      color: Colors.white,
-                    ),
-                  ),
+                      child: Container(
+                          height: 20,
+                          width: 20,
+                          child: Image.asset(
+                            "assets/images/cloud-upload-1.png",
+                            fit: BoxFit.cover,
+                          ))),
                 ),
                 SizedBox(
                   width: 20,
@@ -48,18 +50,24 @@ class DownloadSpeed extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    Text("Upload Speed"),
                     Text(
-                      "5.2Mbps",
-                      style: TextStyle(fontSize: 20),
+                      "Upload Speed",
+                      style: TextStyle(color: Color(0xff00BC73)),
+                    ),
+                    Text(
+                      "1.2bps",
+                      style: TextStyle(fontSize: 20, color: Color(0xff00BC73)),
                     )
                   ],
                 )
               ],
             ),
           ),
+          SizedBox(
+            height: 40,
+          ),
           Container(
-            height: 150,
+            height: 110,
             child: LineChart(LineChartData(
               gridData: FlGridData(
                 show: false,
@@ -124,8 +132,8 @@ class DownloadSpeed extends StatelessWidget {
                     gradientTo: const Offset(0, 1),
                     show: true,
                     colors: [
-                      Colors.green.withOpacity(0.5),
-                      Colors.green.withOpacity(0.0)
+                      Color(0xff00BC73).withOpacity(0.3),
+                      Color(0xff00BC73).withOpacity(0.0)
                     ],
                   ),
                 ),

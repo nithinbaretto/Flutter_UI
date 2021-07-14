@@ -1,6 +1,7 @@
 import 'package:desktopapp/controllers/MenuController.dart';
 import 'package:desktopapp/responsive.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:provider/provider.dart';
 
@@ -15,23 +16,32 @@ class Header extends StatelessWidget {
       children: [
         if (!Responsive.isDesktop(context))
           IconButton(
-            icon: Icon(Icons.menu),
+            icon: Icon(
+              Icons.menu,
+              color: Colors.black,
+            ),
             onPressed: context.read<MenuController>().controlMenu,
           ),
-        if (!Responsive.isMobile(context))
-          Row(
-            children: [
-              Text(
-                "Folder Synchronization",
-                style: Theme.of(context).textTheme.headline6,
-              ),
-              Icon(Icons.navigate_next),
-              Text(
-                "Dashboard",
-                style: Theme.of(context).textTheme.headline6,
-              ),
-            ],
-          ),
+        // if (!Responsive.isMobile(context))
+        Row(
+          children: [
+            Text(
+              "Folder",
+              style: GoogleFonts.ubuntu(
+                  color: Colors.black26,
+                  fontSize: 22,
+                  fontWeight: FontWeight.w500),
+            ),
+            Icon(Icons.navigate_next, color: Colors.black26),
+            Text(
+              "Synchronization",
+              style: GoogleFonts.ubuntu(
+                  color: Colors.black,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
         // if (!Responsive.isMobile(context))
         //   Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
         // Expanded(child: SearchField()),

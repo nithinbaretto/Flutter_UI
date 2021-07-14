@@ -6,15 +6,15 @@ import '../../../constants.dart';
 class UploadSpeed extends StatelessWidget {
   final List<Color> gradientColors = [
     const Color(0xff23b6e6),
-    const Color(0xff02d39a),
+    const Color(0xff00BC73),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.all(defaultPadding),
+        padding: EdgeInsets.all(5),
         decoration: BoxDecoration(
-          color: secondaryColor,
+          color: Colors.white,
           borderRadius: const BorderRadius.all(Radius.circular(10)),
         ),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -30,13 +30,15 @@ class UploadSpeed extends StatelessWidget {
                   height: 50,
                   width: 50,
                   decoration: BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.green),
+                      shape: BoxShape.circle, color: Color(0xff00BC73)),
                   child: Center(
-                    child: Icon(
-                      Icons.cloud,
-                      color: Colors.white,
-                    ),
-                  ),
+                      child: Container(
+                          height: 20,
+                          width: 20,
+                          child: Image.asset(
+                            "assets/images/cloud-upload-1.png",
+                            fit: BoxFit.cover,
+                          ))),
                 ),
                 SizedBox(
                   width: 20,
@@ -48,31 +50,37 @@ class UploadSpeed extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    Text("Upload Speed"),
+                    Text(
+                      "Upload Speed",
+                      style: TextStyle(color: Colors.grey),
+                    ),
                     Text(
                       "5.2Mbps",
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(fontSize: 20, color: Color(0xff00BC73)),
                     )
                   ],
                 )
               ],
             ),
           ),
+          SizedBox(
+            height: 40,
+          ),
           Container(
-            height: 150,
+            height: 100,
             child: LineChart(LineChartData(
               gridData: FlGridData(
                 show: false,
                 drawVerticalLine: false,
                 getDrawingHorizontalLine: (value) {
                   return FlLine(
-                    color: const Color(0xff37434d),
+                    color: Color(0xff00BC73),
                     strokeWidth: 1,
                   );
                 },
                 getDrawingVerticalLine: (value) {
                   return FlLine(
-                    color: const Color(0xff37434d),
+                    color: Color(0xff00BC73),
                     strokeWidth: 1,
                   );
                 },
@@ -83,7 +91,7 @@ class UploadSpeed extends StatelessWidget {
                   showTitles: false,
                   reservedSize: 22,
                   getTextStyles: (value) => const TextStyle(
-                      color: Color(0xff68737d),
+                      color: Color(0xff00BC73),
                       fontWeight: FontWeight.bold,
                       fontSize: 16),
                   margin: 8,
@@ -91,7 +99,7 @@ class UploadSpeed extends StatelessWidget {
               ),
               borderData: FlBorderData(
                   show: false,
-                  border: Border.all(color: const Color(0xff37434d), width: 1)),
+                  border: Border.all(color: Color(0xff00BC73), width: 1)),
               minX: 0,
               maxX: 11,
               minY: 0,
@@ -124,8 +132,8 @@ class UploadSpeed extends StatelessWidget {
                     gradientTo: const Offset(0, 1),
                     show: true,
                     colors: [
-                      Colors.green.withOpacity(0.5),
-                      Colors.green.withOpacity(0.0)
+                      Color(0xff00BC73).withOpacity(0.2),
+                      Color(0xff00BC73).withOpacity(0.0)
                     ],
                   ),
                 ),

@@ -19,7 +19,7 @@ class RecentFiles extends StatelessWidget {
           ? EdgeInsets.all(defaultPadding)
           : EdgeInsets.all(0),
       decoration: BoxDecoration(
-        color: secondaryColor,
+        color: Colors.white,
         borderRadius: const BorderRadius.all(Radius.circular(10)),
       ),
       child: Column(
@@ -66,103 +66,43 @@ class RecentFiles extends StatelessWidget {
                               Row(
                                 children: [
                                   Container(
-                                    child: Icon(Icons.file_copy),
+                                    height: 20,
+                                    width: 20,
+                                    child: Image.asset(
+                                      "assets/images/folder.png",
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
-                                  Text("Logo_New.ai")
+                                  SizedBox(
+                                    width: 20,
+                                  ),
+                                  Text(
+                                    "Logo_New.ai",
+                                    style: TextStyle(color: Colors.black),
+                                  )
                                 ],
                               ),
                               Container(
                                 margin: EdgeInsets.only(right: 45),
-                                child: Text("9.4Mb"),
+                                child: Text("9.4Mb",
+                                    style: TextStyle(color: Colors.grey)),
                               ),
                               Row(
                                 children: [
                                   Container(
-                                    child: Icon(Icons.done),
+                                    child: Icon(
+                                      Icons.done,
+                                      color: Color(0xff00BC73),
+                                    ),
                                   ),
                                   SizedBox(
                                     width: 5,
                                   ),
                                   Container(
-                                    child: Text("Done"),
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Container(
-                          padding: EdgeInsets.only(
-                              left: 20, top: 10, right: 20, bottom: 10),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.black12),
-                          margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    child: Icon(Icons.file_copy),
-                                  ),
-                                  Text("Document32.pdf")
-                                ],
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(right: 70),
-                                child: Text("9.4Mb"),
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    child: Icon(Icons.done),
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  Container(
-                                    child: Text("Done"),
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(left: 30, top: 10, right: 30),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    child: Icon(Icons.file_copy),
-                                  ),
-                                  Text("Logo_New.ai")
-                                ],
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(right: 10),
-                                child: Text("9.5Mb"),
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    child: LinearPercentIndicator(
-                                      alignment: MainAxisAlignment.end,
-                                      padding: EdgeInsets.all(0),
-                                      width: 100,
-                                      lineHeight: 8.0,
-                                      percent: 0.2,
-                                      progressColor: Colors.red,
+                                    child: Text(
+                                      "Done",
+                                      style:
+                                          TextStyle(color: Color(0xff00BC73)),
                                     ),
                                   )
                                 ],
@@ -187,14 +127,137 @@ class RecentFiles extends StatelessWidget {
                               Row(
                                 children: [
                                   Container(
-                                    child: Icon(Icons.file_copy),
+                                    height: 20,
+                                    width: 20,
+                                    child: Image.asset(
+                                      "assets/images/folder.png",
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
-                                  Text("Document32.pdf")
+                                  SizedBox(
+                                    width: 20,
+                                  ),
+                                  Text(
+                                    "Document32.pdf",
+                                    style: TextStyle(color: Colors.black),
+                                  )
+                                ],
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(right: 70),
+                                child: Text("9.4Mb",
+                                    style: TextStyle(color: Colors.grey)),
+                              ),
+                              Row(
+                                children: [
+                                  Container(
+                                    child: Icon(
+                                      Icons.done,
+                                      color: Color(0xff00BC73),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Container(
+                                    child: Text(
+                                      "Done",
+                                      style:
+                                          TextStyle(color: Color(0xff00BC73)),
+                                    ),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 30, top: 10, right: 30),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    height: 20,
+                                    width: 20,
+                                    child: Image.asset(
+                                      "assets/images/folder.png",
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 20,
+                                  ),
+                                  Text(
+                                    "Logo_New.ai",
+                                    style: TextStyle(color: Colors.black),
+                                  )
+                                ],
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(right: 10),
+                                child: Text(
+                                  "9.5Mb",
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                              ),
+                              Row(
+                                children: [
+                                  Container(
+                                    child: LinearPercentIndicator(
+                                        alignment: MainAxisAlignment.end,
+                                        padding: EdgeInsets.all(0),
+                                        width: 100,
+                                        lineHeight: 8.0,
+                                        percent: 0.2,
+                                        progressColor: Color(0xff00BC73)),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(
+                              left: 20, top: 10, right: 20, bottom: 10),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.black12),
+                          margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    height: 20,
+                                    width: 20,
+                                    child: Image.asset(
+                                      "assets/images/folder.png",
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 20,
+                                  ),
+                                  Text(
+                                    "Document32.pdf",
+                                    style: TextStyle(color: Colors.black),
+                                  )
                                 ],
                               ),
                               Container(
                                 margin: EdgeInsets.only(right: 40),
-                                child: Text("9.4Mb"),
+                                child: Text("9.4Mb",
+                                    style: TextStyle(color: Colors.grey)),
                               ),
                               Row(
                                 children: [
@@ -205,7 +268,7 @@ class RecentFiles extends StatelessWidget {
                                       width: 100,
                                       lineHeight: 8.0,
                                       percent: 0.2,
-                                      progressColor: Colors.red,
+                                      progressColor: Color(0xff00BC73),
                                     ),
                                   )
                                 ],
@@ -257,14 +320,23 @@ class RecentFiles extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Container(
-                                    child: Icon(Icons.file_copy),
+                                    height: 20,
+                                    width: 20,
+                                    child: Image.asset(
+                                      "assets/images/folder.png",
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
                                   ),
                                   Container(
                                     width: 60,
                                     child: Text(
                                       "Logo_New.ai",
                                       overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(fontSize: 12),
+                                      style: TextStyle(
+                                          fontSize: 12, color: Colors.black),
                                     ),
                                   )
                                 ],
@@ -273,13 +345,17 @@ class RecentFiles extends StatelessWidget {
                                 margin: EdgeInsets.only(right: 0),
                                 child: Text(
                                   "9.4Mb",
-                                  style: TextStyle(fontSize: 12),
+                                  style: TextStyle(
+                                      fontSize: 12, color: Colors.black),
                                 ),
                               ),
                               Row(
                                 children: [
                                   Container(
-                                    child: Icon(Icons.done),
+                                    child: Icon(
+                                      Icons.done,
+                                      color: Color(0xff00BC73),
+                                    ),
                                   ),
                                   SizedBox(
                                     width: 5,
@@ -287,7 +363,9 @@ class RecentFiles extends StatelessWidget {
                                   Container(
                                     child: Text(
                                       "Done",
-                                      style: TextStyle(fontSize: 12),
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Color(0xff00BC73)),
                                     ),
                                   )
                                 ],
@@ -312,13 +390,22 @@ class RecentFiles extends StatelessWidget {
                               Row(
                                 children: [
                                   Container(
-                                    child: Icon(Icons.file_copy),
+                                    height: 20,
+                                    width: 20,
+                                    child: Image.asset(
+                                      "assets/images/folder.png",
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
                                   ),
                                   Container(
                                     width: 60,
                                     child: Text(
                                       "Document32.pdf",
-                                      style: TextStyle(fontSize: 12),
+                                      style: TextStyle(
+                                          fontSize: 12, color: Colors.black),
                                       overflow: TextOverflow.ellipsis,
                                     ),
                                   )
@@ -328,13 +415,17 @@ class RecentFiles extends StatelessWidget {
                                 margin: EdgeInsets.only(right: 0),
                                 child: Text(
                                   "9.4Mb",
-                                  style: TextStyle(fontSize: 12),
+                                  style: TextStyle(
+                                      fontSize: 12, color: Colors.black),
                                 ),
                               ),
                               Row(
                                 children: [
                                   Container(
-                                    child: Icon(Icons.done),
+                                    child: Icon(
+                                      Icons.done,
+                                      color: Color(0xff00BC73),
+                                    ),
                                   ),
                                   SizedBox(
                                     width: 5,
@@ -342,7 +433,9 @@ class RecentFiles extends StatelessWidget {
                                   Container(
                                     child: Text(
                                       "Done",
-                                      style: TextStyle(fontSize: 12),
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Color(0xff00BC73)),
                                     ),
                                   )
                                 ],
@@ -361,13 +454,22 @@ class RecentFiles extends StatelessWidget {
                               Row(
                                 children: [
                                   Container(
-                                    child: Icon(Icons.file_copy),
+                                    height: 20,
+                                    width: 20,
+                                    child: Image.asset(
+                                      "assets/images/folder.png",
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
                                   ),
                                   Container(
                                     width: 60,
                                     child: Text(
                                       "Logo_New.ai",
-                                      style: TextStyle(fontSize: 12),
+                                      style: TextStyle(
+                                          fontSize: 12, color: Colors.black),
                                       overflow: TextOverflow.ellipsis,
                                     ),
                                   )
@@ -377,7 +479,8 @@ class RecentFiles extends StatelessWidget {
                                 margin: EdgeInsets.only(right: 10),
                                 child: Text(
                                   "9.5Mb",
-                                  style: TextStyle(fontSize: 12),
+                                  style: TextStyle(
+                                      fontSize: 12, color: Colors.black),
                                 ),
                               ),
                               Row(
@@ -389,7 +492,7 @@ class RecentFiles extends StatelessWidget {
                                       width: 50,
                                       lineHeight: 8.0,
                                       percent: 0.2,
-                                      progressColor: Colors.red,
+                                      progressColor: Color(0xff00BC73),
                                     ),
                                   )
                                 ],
@@ -414,13 +517,22 @@ class RecentFiles extends StatelessWidget {
                               Row(
                                 children: [
                                   Container(
-                                    child: Icon(Icons.file_copy),
+                                    height: 20,
+                                    width: 20,
+                                    child: Image.asset(
+                                      "assets/images/folder.png",
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
                                   ),
                                   Container(
                                     width: 80,
                                     child: Text(
                                       "Document32.pdf",
-                                      style: TextStyle(fontSize: 12),
+                                      style: TextStyle(
+                                          fontSize: 12, color: Colors.black),
                                       overflow: TextOverflow.ellipsis,
                                     ),
                                   )
@@ -430,7 +542,8 @@ class RecentFiles extends StatelessWidget {
                                 margin: EdgeInsets.only(right: 40, top: 5),
                                 child: Text(
                                   "9.4Mb",
-                                  style: TextStyle(fontSize: 12),
+                                  style: TextStyle(
+                                      fontSize: 12, color: Colors.black),
                                 ),
                               ),
                               Row(
@@ -443,7 +556,7 @@ class RecentFiles extends StatelessWidget {
                                       width: 50,
                                       lineHeight: 8.0,
                                       percent: 0.2,
-                                      progressColor: Colors.red,
+                                      progressColor: Color(0xff00BC73),
                                     ),
                                   )
                                 ],

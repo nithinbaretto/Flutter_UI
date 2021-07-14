@@ -15,7 +15,7 @@ class UploadFiles extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: secondaryColor,
+        color: Colors.white,
         borderRadius: const BorderRadius.all(Radius.circular(10)),
       ),
       child: Column(
@@ -30,13 +30,20 @@ class UploadFiles extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text("Choose folders"),
+                  Text(
+                    "Choose folders",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.black),
+                  ),
                   SizedBox(
                     height: 5,
                   ),
                   Text(
                     "Select your folder to sync with the cloud folder",
-                    style: TextStyle(fontSize: 12),
+                    style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.grey,
+                        fontWeight: FontWeight.w600),
                   ),
                   SizedBox(
                     height: 30,
@@ -46,7 +53,7 @@ class UploadFiles extends StatelessWidget {
                           children: [
                             Container(
                               decoration: BoxDecoration(
-                                  color: Colors.green,
+                                  color: Color(0xff00BC73),
                                   borderRadius: BorderRadius.circular(20)),
                               padding: EdgeInsets.all(15),
                               child: Center(
@@ -63,13 +70,21 @@ class UploadFiles extends StatelessWidget {
                                 Row(
                                   children: [
                                     Container(
-                                      child: Icon(Icons.file_copy),
+                                      height: 20,
+                                      width: 20,
+                                      child: Image.asset(
+                                        "assets/images/folder.png",
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
                                     SizedBox(
                                       width: 5,
                                     ),
                                     Container(
-                                      child: Text("Office Work"),
+                                      child: Text(
+                                        "Office Work",
+                                        style: TextStyle(color: Colors.grey),
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -77,6 +92,7 @@ class UploadFiles extends StatelessWidget {
                                   margin: EdgeInsets.only(left: 10, right: 20),
                                   child: Text(
                                     "Copy with",
+                                    style: TextStyle(color: Colors.blue),
                                   ),
                                 )
                               ],
@@ -86,7 +102,7 @@ class UploadFiles extends StatelessWidget {
                             ),
                             Container(
                               decoration: BoxDecoration(
-                                  color: Colors.green,
+                                  color: Color(0xff00BC73),
                                   borderRadius: BorderRadius.circular(20)),
                               padding: EdgeInsets.all(15),
                               child:
@@ -101,13 +117,19 @@ class UploadFiles extends StatelessWidget {
                                 Row(
                                   children: [
                                     Container(
-                                      child: Icon(Icons.file_copy),
+                                      height: 20,
+                                      width: 20,
+                                      child: Image.asset(
+                                        "assets/images/folder.png",
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
                                     SizedBox(
                                       width: 5,
                                     ),
                                     Container(
-                                      child: Text("Office Work"),
+                                      child: Text("Office Work",
+                                          style: TextStyle(color: Colors.grey)),
                                     ),
                                   ],
                                 ),
@@ -115,6 +137,7 @@ class UploadFiles extends StatelessWidget {
                                   margin: EdgeInsets.only(left: 10, right: 20),
                                   child: Text(
                                     "Copy with",
+                                    style: TextStyle(color: Colors.blue),
                                   ),
                                 )
                               ],
@@ -126,7 +149,7 @@ class UploadFiles extends StatelessWidget {
                             Expanded(
                               child: Container(
                                 decoration: BoxDecoration(
-                                    color: Colors.green,
+                                    color: Color(0xff00BC73),
                                     borderRadius: BorderRadius.circular(20)),
                                 padding: EdgeInsets.all(15),
                                 child: Center(
@@ -141,7 +164,7 @@ class UploadFiles extends StatelessWidget {
                             Expanded(
                               child: Container(
                                 decoration: BoxDecoration(
-                                    color: Colors.green,
+                                    color: Color(0xff00BC73),
                                     borderRadius: BorderRadius.circular(20)),
                                 padding: EdgeInsets.all(15),
                                 child: Center(
@@ -167,13 +190,20 @@ class UploadFiles extends StatelessWidget {
                                     Row(
                                       children: [
                                         Container(
-                                          child: Icon(Icons.file_copy),
+                                          height: 20,
+                                          width: 20,
+                                          child: Image.asset(
+                                            "assets/images/folder.png",
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
                                         SizedBox(
                                           width: 5,
                                         ),
                                         Container(
-                                          child: Text("Office Work"),
+                                          child: Text("Office Work",
+                                              style: TextStyle(
+                                                  color: Colors.grey)),
                                         ),
                                       ],
                                     ),
@@ -182,6 +212,7 @@ class UploadFiles extends StatelessWidget {
                                           EdgeInsets.only(left: 10, right: 20),
                                       child: Text(
                                         "Copy with",
+                                        style: TextStyle(color: Colors.blue),
                                       ),
                                     )
                                   ],
@@ -195,21 +226,33 @@ class UploadFiles extends StatelessWidget {
                                     Row(
                                       children: [
                                         Container(
+                                          height: 20,
+                                          width: 20,
                                           margin: EdgeInsets.only(
                                             left: 20,
                                           ),
-                                          child: Icon(Icons.file_copy),
+                                          child: Image.asset(
+                                            "assets/images/folder.png",
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
                                         SizedBox(
                                           width: 5,
                                         ),
                                         Container(
-                                          child: Text("Office Work"),
+                                          child: Text(
+                                            "Office Work",
+                                            style:
+                                                TextStyle(color: Colors.grey),
+                                          ),
                                         ),
                                       ],
                                     ),
                                     Container(
-                                      child: Text("Copy with"),
+                                      child: Text(
+                                        "Copy with",
+                                        style: TextStyle(color: Colors.blue),
+                                      ),
                                     )
                                   ],
                                 ),
@@ -227,7 +270,9 @@ class UploadFiles extends StatelessWidget {
                         borderRadius: BorderRadius.circular(15)),
                     child: Center(
                       child: Text(
-                          "1 folder and 487 files are selested. totla 1.5Gb"),
+                        "1 folder and 487 files are selested. totla 1.5Gb",
+                        style: TextStyle(color: Colors.grey),
+                      ),
                     ),
                   ),
                   SizedBox(
@@ -237,7 +282,7 @@ class UploadFiles extends StatelessWidget {
                     padding: EdgeInsets.all(15),
                     margin: EdgeInsets.only(bottom: 10),
                     decoration: BoxDecoration(
-                        color: Colors.green,
+                        color: Color(0xff00BC73),
                         borderRadius: BorderRadius.circular(15)),
                     child: Center(child: Text("Start Synchronization")),
                   )
