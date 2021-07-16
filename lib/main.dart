@@ -1,6 +1,7 @@
 // @dart=2.9
 import 'package:desktopapp/constants.dart';
 import 'package:desktopapp/controllers/MenuController.dart';
+import 'package:desktopapp/screens/Signup_page.dart';
 import 'package:desktopapp/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
             create: (context) => MenuController(),
           ),
         ],
-        child: MainScreen(),
+        child: SignupPage(),
       ),
     );
   }
